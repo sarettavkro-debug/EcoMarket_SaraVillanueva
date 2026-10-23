@@ -136,7 +136,7 @@ EcoMarket/
 
 | Vista Móvil | Vista Escritorio |
 | :---: | :---: |
-| ![Contacto Móvil](img/screenshots/contacto-mobile.png) | ![Contacto Escritorio](img/screenshots/contacto-desktop.png) |
+| ![Contacto Móvil](img/screenshots/contacto-mobile.png) | ![Contacto](img/screenshots/contacto-desktop.png) |
 
 ---
 
