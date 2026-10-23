@@ -59,16 +59,16 @@
                     <h3>FILTROS</h3>
                 </div>
 
-                <div class="filter-group">
-                    <h4>Categorías</h4>
-                    <ul>
-                        <li><label><input type="checkbox" checked> Todos</label></li>
-                        <li><label><input type="checkbox"> Estilo Casual</label></li>
-                        <li><label><input type="checkbox"> Estilo Deportivo</label></li>
-                        <li><label><input type="checkbox"> Estilo Urbano</label></li>
-                        <li><label><input type="checkbox"> Estilo Artístico</label></li>
-                    </ul>
-                </div>
+<div class="filter-group">
+    <h4>Categorías</h4>
+    <ul class="filter-list">
+        <li><label><input type="radio" name="categoria" id="filtro-todos" checked> Todos</label></li>
+        <li><label><input type="radio" name="categoria" id="filtro-casual"> Estilo Casual</label></li>
+        <li><label><input type="radio" name="categoria" id="filtro-deportivo"> Estilo Deportivo</label></li>
+        <li><label><input type="radio" name="categoria" id="filtro-urbano"> Estilo Urbano</label></li>
+        <li><label><input type="radio" name="categoria" id="filtro-artistico"> Estilo Artístico</label></li>
+    </ul>
+</div>
 
                 <div class="filter-group">
                     <h4>Disponibilidad</h4>
@@ -79,9 +79,15 @@
                 </div>
 
                 <div class="filter-group">
-                    <h4>Rango de Precio</h4>
-                    <p class="price-range-label">$35.000 – $180.000 COP</p>
-                </div>
+    <h4>Rango de Precio</h4>
+    <div class="price-slider-container">
+        <input type="range" min="20000" max="200000" step="5000" value="120000" class="price-range-input" aria-label="Rango de precio">
+        <div class="price-values">
+            <span>$20.000</span>
+            <span>$200.000 COP</span>
+        </div>
+    </div>
+</div>
             </aside>
 
             <!-- Sección de Contenido -->
@@ -91,7 +97,7 @@
                 <div class="visual-search-bar">
                     <input type="text" placeholder="Buscar prendas sostenibles..." aria-label="Buscar">
                     <button type="submit" aria-label="Buscar">
-                        <img src="../img/icons/search.svg" alt="Buscar" class="search-btn-icon">
+                        <img src="../img/icons/lupa.svg" alt="Buscar" class="search-btn-icon">
                     </button>
                 </div>
 
@@ -99,41 +105,41 @@
                 <div class="catalog-grid">
 
                     <!-- Producto 1 -->
-                    <article class="product-card">
+                    <article class="product-card cat-casual stock-in">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Camisa de Lino Casual">
+                            <img src="../img/products/Camiseta-Casual .jpg" alt="Camisa de Lino Casual">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO CASUAL</span>
                             <h3 class="product-title">Camisa de Lino Algodón</h3>
-                            <p class="product-price">$85.000 COP</p>
+                            <p class="product-price">$105.000 COP</p>
                             <a href="#" class="card-button">Ver más &rarr;</a>
                         </div>
                     </article>
 
                     <!-- Producto 2 -->
-                    <article class="product-card">
+                    <article class="product-card cat-casual">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Top Deportivo de Cáñamo">
+                            <img src="../img/products/Camiseta-Casual.jpg" alt="Top Deportivo de Cáñamo">
                         </div>
                         <div class="card-body">
-                            <span class="product-category">ESTILO DEPORTIVO</span>
-                            <h3 class="product-title">Top Deportivo Reciclado</h3>
-                            <p class="product-price">$65.000 COP</p>
+                            <span class="product-category">ESTILO CASUAL</span>
+                            <h3 class="product-title">Camiseta de algodón</h3>
+                            <p class="product-price">$90.000 COP</p>
                             <a href="#" class="card-button">Ver más &rarr;</a>
                         </div>
                     </article>
 
                     <!-- Producto 3 -->
-                    <article class="product-card">
+                    <article class="product-card cat-casual">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Chaqueta Urbana de Lino">
+                            <img src="../img/products/Pantalon-casual.jpg" alt="Chaqueta Urbana de Lino">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO URBANO</span>
@@ -144,11 +150,11 @@
                     </article>
 
                     <!-- Producto 4 -->
-                    <article class="product-card">
+                    <article class="product-card cat-casual">
                         <div class="card-image-wrapper">
                             <span class="stock-badge agotado">Agotado</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Vestido Bordado Botánico">
+                            <img src="../img/products/Sueter (1).jpg" alt="Vestido Bordado Botánico">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO ARTÍSTICO</span>
@@ -159,11 +165,11 @@
                     </article>
 
                     <!-- Producto 5 -->
-                    <article class="product-card">
+                    <article class="product-card cat-urbano">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Pantalón Casual de Cáñamo">
+                            <img src="../img/products/Bermuda-urbano.jpg" alt="Pantalón Casual de Cáñamo">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO CASUAL</span>
@@ -174,11 +180,11 @@
                     </article>
 
                     <!-- Producto 6 -->
-                    <article class="product-card">
+                    <article class="product-card cat-urbano">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Short Deportivo Sostenible">
+                            <img src="../img/products/Cargo-urbano.jpg" alt="Short Deportivo Sostenible">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO DEPORTIVO</span>
@@ -189,11 +195,11 @@
                     </article>
 
                     <!-- Producto 7 -->
-                    <article class="product-card">
+                    <article class="product-card cat-urbano">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Camiseta Graphic Art">
+                            <img src="../img/products/Chaqueta-urbano.jpg" alt="Camiseta Graphic Art">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO ARTÍSTICO</span>
@@ -204,11 +210,11 @@
                     </article>
 
                     <!-- Producto 8 -->
-                    <article class="product-card">
+                    <article class="product-card cat-urbano">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Hoodie Urbano Reciclado">
+                            <img src="../img/products/Saco-urbano.jpg" alt="Hoodie Urbano Reciclado">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO URBANO</span>
@@ -219,11 +225,11 @@
                     </article>
 
                     <!-- Producto 9 -->
-                    <article class="product-card">
+                    <article class="product-card cat-artistico">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Kimono Artesanal">
+                            <img src="../img/products/Camisa-Art.jpg" alt="Kimono Artesanal">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO ARTÍSTICO</span>
@@ -234,11 +240,11 @@
                     </article>
 
                     <!-- Producto 10 -->
-                    <article class="product-card">
+                    <article class="product-card cat-artistico">
                         <div class="card-image-wrapper">
                             <span class="stock-badge agotado">Agotado</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Leggings Biodegradables">
+                            <img src="../img/products/Chaqueta-art.jpg" alt="Leggings Biodegradables">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO DEPORTIVO</span>
@@ -249,11 +255,11 @@
                     </article>
 
                     <!-- Producto 11 -->
-                    <article class="product-card">
+                    <article class="product-card cat-artistico">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Vestido Casual Fresco">
+                            <img src="../img/products/Sudadera-Art.jpg" alt="Vestido Casual Fresco">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO CASUAL</span>
@@ -264,11 +270,11 @@
                     </article>
 
                     <!-- Producto 12 -->
-                    <article class="product-card">
+                    <article class="product-card cat-artistico">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Jogger Urbano">
+                            <img src="../img/products/Vestido-art.jpg" alt="Jogger Urbano">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO URBANO</span>
@@ -279,11 +285,11 @@
                     </article>
 
                     <!-- Producto 13 -->
-                    <article class="product-card">
+                    <article class="product-card cat-deportivo">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Chaleco Bordado Artístico">
+                            <img src="../img/products/Chaqueta-Deportiva.jpg" alt="Chaleco Bordado Artístico">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO ARTÍSTICO</span>
@@ -294,11 +300,11 @@
                     </article>
 
                     <!-- Producto 14 -->
-                    <article class="product-card">
+                    <article class="product-card cat-deportivo">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Camiseta Básica Casual">
+                            <img src="../img/products/Jogger-Deportivo.jpg" alt="Camiseta Básica Casual">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO CASUAL</span>
@@ -309,11 +315,11 @@
                     </article>
 
                     <!-- Producto 15 -->
-                    <article class="product-card">
+                    <article class="product-card cat-deportivo">
                         <div class="card-image-wrapper">
                             <span class="stock-badge agotado">Agotado</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Chaqueta Deportiva">
+                            <img src="../img/products/Shorts-Deportivo (1).jpg" alt="Chaqueta Deportiva">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO DEPORTIVO</span>
@@ -324,11 +330,11 @@
                     </article>
 
                     <!-- Producto 16 -->
-                    <article class="product-card">
+                    <article class="product-card cat-deportivo">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Bermuda Urbana">
+                            <img src="../img/products/Shorts-Deportivo.jpg" alt="Bermuda Urbana">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO URBANO</span>
@@ -339,11 +345,11 @@
                     </article>
 
                     <!-- Producto 17 -->
-                    <article class="product-card">
+                    <article class="product-card cat-deportivo">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Poncho Artístico">
+                            <img src="../img/products/Sudadera-Deportivo.jpg" alt="Poncho Artístico">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO ARTÍSTICO</span>
@@ -354,11 +360,11 @@
                     </article>
 
                     <!-- Producto 18 -->
-                    <article class="product-card">
+                    <article class="product-card cat-casual">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Musculosa Deportiva">
+                            <img src="../img/products/Pantalon-casual.jpg" alt="Musculosa Deportiva">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO DEPORTIVO</span>
@@ -369,11 +375,11 @@
                     </article>
 
                     <!-- Producto 19 -->
-                    <article class="product-card">
+                    <article class="product-card cat-deportivo">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Top Urbano">
+                            <img src="../img/products/Top-Deportivo.jpg" alt="Top Urbano">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO URBANO</span>
@@ -384,11 +390,11 @@
                     </article>
 
                     <!-- Producto 20 -->
-                    <article class="product-card">
+                    <article class="product-card cat-urbano">
                         <div class="card-image-wrapper">
                             <span class="stock-badge">En Stock</span>
                             <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-                            <img src="../img/products/bolsa-algodon.jpg" alt="Enterizo Casual">
+                            <img src="../img/products/Saco-urbano.jpg" alt="Enterizo Casual">
                         </div>
                         <div class="card-body">
                             <span class="product-category">ESTILO CASUAL</span>

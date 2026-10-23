@@ -514,3 +514,46 @@
         font-size: 0.8rem;
     }
 }
+/* ==========================================
+CONTROL DESLIZANTE DE PRECIOS
+========================================== */
+.price-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.price-range-input {
+    width: 100%;
+    accent-color: var(--accent-green); /* Pone el deslizador con el verde de EcoMarket */
+    cursor: pointer;
+}
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+/* ==========================================
+FILTRADO DINÁMICO CON CSS PURO (SIN JS)
+   ========================================== */
+
+/* Por defecto, cuando "Todos" está seleccionado, se muestra todo */
+.catalog-grid .product-card {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Si se selecciona "Estilo Casual" */
+.catalog-layout:has(#filtro-casual:checked) .product-card:not(.cat-casual),
+/* Si se selecciona "Estilo Deportivo" */
+.catalog-layout:has(#filtro-deportivo:checked) .product-card:not(.cat-deportivo),
+/* Si se selecciona "Estilo Urbano" */
+.catalog-layout:has(#filtro-urbano:checked) .product-card:not(.cat-urbano),
+/* Si se selecciona "Estilo Artístico" */
+.catalog-layout:has(#filtro-artistico:checked) .product-card:not(.cat-artistico) {
+    display: none;
+}
