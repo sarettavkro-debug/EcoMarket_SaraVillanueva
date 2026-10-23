@@ -37,7 +37,7 @@ Sigue estos pasos para ejecutar y explorar la aplicación localmente:
 
 1. **Clonar o descargar el repositorio**:
    ```bash
-   git clone https://github.com/sarettavkro-debug/EcoMarket_SaraVillanueva.git
+   git clone https://sarettavkro-debug.github.io/EcoMarket_SaraVillanueva/
    ```
    *O bien, descarga el archivo ZIP del proyecto y extráelo.*
 
@@ -112,7 +112,7 @@ EcoMarket/
 
 | Vista Móvil | Vista Escritorio |
 | :---: | :---: |
-| ![Inicio Móvil](img/screenshots/inicio-mobile.png) | ![Inicio Escritorio](img/screenshots/inicio-desktop.png) |
+| ![alt text](<img/WhatsApp Image 2026-10-22 at 23.55.50 (2).jpeg>) | ![alt text](img/inicioportatil.png) |
 
 ---
 
@@ -120,7 +120,7 @@ EcoMarket/
 
 | Vista Móvil | Vista Escritorio |
 | :---: | :---: |
-| ![Productos Móvil](img/screenshots/productos-mobile.png) | ![Productos Escritorio](img/screenshots/productos-desktop.png) |
+| ![alt text](<img/WhatsApp Image 2026-10-22 at 23.55.50 (1).jpeg>) | ![alt text](img/productos.png) |
 
 ---
 
@@ -128,7 +128,7 @@ EcoMarket/
 
 | Vista Móvil | Vista Escritorio |
 | :---: | :---: |
-| ![Nosotros Móvil](img/screenshots/nosotros-mobile.png) | ![Nosotros Escritorio](img/screenshots/nosotros-desktop.png) |
+| ![alt text](<img/WhatsApp Image 2026-10-22 at 23.55.50.jpeg>) | ![alt text](img/nosotrosp.png) |
 
 ---
 
@@ -136,7 +136,7 @@ EcoMarket/
 
 | Vista Móvil | Vista Escritorio |
 | :---: | :---: |
-| ![Contacto Móvil](img/screenshots/contacto-mobile.png) | ![Contacto Escritorio](img/screenshots/contacto-desktop.png) |
+| ![alt text](<img/WhatsApp Image 2026-10-22 at 23.55.49.jpeg>) | ![alt text](img/contactop.png) |
 
 ---
 
