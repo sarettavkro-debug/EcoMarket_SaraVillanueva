@@ -307,247 +307,227 @@
     color: var(--text-muted);
 }
 
-.catalog-main {
-    max-width: 1300px;
-    margin: 30px auto;
-    padding: 0 20px;
+/* ==========================================
+1. ENCABEZADO (HEADER) - MOBILE FIRST
+   ========================================== */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(27, 38, 30, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.catalog-header-container {
-    margin-bottom: 30px;
-}
-
-.breadcrumbs {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-}
-
-.breadcrumbs a {
-    color: var(--text-muted);
-}
-
-.breadcrumbs a:hover {
-    color: var(--accent-green);
-}
-
-.catalog-title {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: var(--text-light);
-    letter-spacing: 1px;
-}
-
-/* Layout de Filtros y Productos */
-.catalog-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Barra lateral de Filtros (Oculta o colapsada en móvil, sticky en desktop) */
-.filters-sidebar {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 20px;
-    border-radius: 6px;
-}
-
-.filter-group {
-    margin-bottom: 20px;
-}
-
-.filter-group h3, .filter-group h4 {
-    font-size: 0.9rem;
-    letter-spacing: 1.5px;
-    color: var(--accent-green);
-    margin-bottom: 12px;
-    text-transform: uppercase;
-}
-
-.filter-group ul {
-    list-style: none;
-}
-
-.filter-group li {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.filter-group label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.price-range-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-/* Buscador visual estilizado */
-.visual-search-bar {
-    display: flex;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.visual-search-bar input {
-    flex: 1;
-    background: transparent;
-    border: none;
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
     color: var(--text-light);
-    font-size: 0.95rem;
-    outline: none;
 }
 
-.visual-search-bar button {
-    background: transparent;
-    border: none;
-    padding: 0 20px;
-    cursor: pointer;
+/* Móvil: Ocultar menú de enlaces horizontal */
+.nav-menu {
+    display: none;
 }
 
-.search-btn-icon {
-    width: 18px;
-    height: 18px;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-icon {
+    width: 20px;
+    height: 20px;
     filter: invert(0.9);
+    display: block;
 }
 
-/* Matriz de Productos (Grid Mobile First) */
-.catalog-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 columna en móvil */
-    gap: 20px;
+.menu-toggle {
+    display: block;
 }
 
-/* Insignia de Stock y Botón Favoritos en la tarjeta */
-.card-image-wrapper {
-    position: relative;
-}
-
-.stock-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: rgba(35, 50, 39, 0.85);
-    color: var(--accent-green);
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-    backdrop-filter: blur(4px);
-    border: 1px solid var(--border-color);
-}
-
-.stock-badge.agotado {
-    color: #e07a5f;
-    border-color: rgba(224, 122, 95, 0.3);
-}
-
-.favorite-btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(27, 38, 30, 0.7);
-    border: 1px solid var(--border-color);
-    color: var(--text-light);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Requerimiento funcional: Cambio de color con :active */
-.favorite-btn:active {
-    background-color: var(--accent-green);
-    color: var(--bg-dark);
-    transform: scale(0.9);
-}
-
-.product-price {
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--accent-green);
-    margin-bottom: 15px;
-}
-
-/* Paginación Visual */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 50px;
-}
-
-.page-link {
-    padding: 8px 14px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    background-color: var(--bg-card);
-    transition: all 0.3s;
-}
-
-.page-link:hover, .page-link.active {
-    border-color: var(--accent-green);
-    color: var(--accent-green);
-}
-
-.page-link.disabled {
-    opacity: 0.4;
-    pointer-events: none;
-}
-
-
-
-/* Tablet (desde 768px): 2 columnas de productos */
-@media (min-width: 1100px) {
-    .catalog-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-    }
-}
-
-/* Escritorio (desde 992px): Sidebar a la izquierda + 3 o 4 columnas */
-@media (min-width: 992px) {
-    .catalog-layout {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 40px;
+/* Pantallas grandes (Desktop) */
+@media (min-width: 768px) {
+    .header-container {
+        padding: 20px;
     }
 
-    .filters-sidebar {
-        width: 280px;
-        position: sticky;
-        top: 100px;
-        flex-shrink: 0;
+    .logo {
+        font-size: 1.8rem;
     }
 
-    .products-content {
-        flex: 1;
+    .nav-menu {
+        display: block;
     }
 
-    .catalog-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 o 4 columnas según preferencia */
+    .nav-menu ul {
+        display: flex;
+        list-style: none;
         gap: 30px;
     }
 
-    .catalog-title {
-        font-size: 2.5rem;
+    .nav-menu a {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        transition: color 0.3s ease;
+    }
+
+    .nav-menu a.active, 
+    .nav-menu a:hover {
+        color: var(--accent-green);
+    }
+
+    .header-actions {
+        gap: 20px;
+    }
+
+    .header-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 }
+
+
+/* ==========================================
+   2. HERO SECTION (INICIO) - MOBILE FIRST
+   ========================================== */
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    background-image: url('../img/hero/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.hero-backdrop {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(180deg, rgba(27, 38, 30, 0.85) 0%, rgba(27, 38, 30, 0.5) 100%);
+}
+
+.hero-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 550px;
+    background: rgba(27, 38, 30, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero-tagline {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--accent-green);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--accent-green);
+    margin: 10px 0;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        height: 85vh;
+        justify-content: flex-start;
+        padding: 0 8%;
+    }
+
+    .hero-backdrop {
+        background: linear-gradient(90deg, rgba(27, 38, 30, 0.85) 0%, rgba(27, 38, 30, 0.4) 100%);
+    }
+
+    .hero-card {
+        padding: 40px;
+        text-align: left;
+    }
+
+    .hero-tagline {
+        font-size: 0.85rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ==========================================
+   3. SECCIÓN DE INICIO / DESTACADOS
+   ========================================== */
+.featured-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    color: var(--accent-green);
+    letter-spacing: 2px;
+}
+
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .featured-section {
+        margin: 80px auto;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40
