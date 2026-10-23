@@ -1,304 +1,459 @@
-<!-- Grid de 20 Productos (Matriz Completa) -->
-<div class="catalog-grid">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket | Catálogo Sostenible</title>
+    <meta name="description" content="Explora el catálogo completo de prendas ecológicas y moda sostenible de EcoMarket.">
+    
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
 
-    <!-- Producto 1 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/bolsa-algodon.jpg" alt="Bolsa de Algodón Orgánico">
-        </div>
-        <div class="card-body">
-            <span class="product-category">MODA SOSTENIBLE</span>
-            <h3 class="product-title">Bolsa de Algodón Orgánico</h3>
-            <p class="product-price">$45.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+    <!-- Encabezado (Header) -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">EcoMarket</a>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
 
-    <!-- Producto 2 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/cepillo-bambu.jpg" alt="Cepillo Dental de Bambú">
+            <div class="header-actions">
+                <a href="#menu" class="icon-link menu-toggle" aria-label="Menú">
+                    <img src="../img/icons/menu.svg" alt="Menú" class="header-icon">
+                </a>
+                <a href="#buscar" class="icon-link" aria-label="Búsqueda">
+                    <img src="../img/icons/lupa.svg" alt="Búsqueda" class="header-icon">
+                </a>
+                <a href="#carrito" class="icon-link" aria-label="Carrito de compras">
+                    <img src="../img/icons/carrito.svg" alt="Carrito" class="header-icon">
+                </a>
+            </div>
         </div>
-        <div class="card-body">
-            <span class="product-category">CUIDADO PERSONAL</span>
-            <h3 class="product-title">Cepillo Dental de Bambú</h3>
-            <p class="product-price">$18.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+    </header>
 
-    <!-- Producto 3 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/termo-inox.jpg" alt="Termo de Acero Inoxidable">
+    <main class="catalog-main">
+        <!-- Breadcrumbs y Título -->
+        <div class="catalog-header-container">
+            <nav class="breadcrumbs">
+                <a href="../index.html">Inicio</a> / <span>Productos</span>
+            </nav>
+            <h1 class="catalog-title">CATÁLOGO SOSTENIBLE</h1>
         </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR & VIAJE</span>
-            <h3 class="product-title">Termo Inoxidable 750ml</h3>
-            <p class="product-price">$89.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
 
-    <!-- Producto 4 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge agotado">Agotado</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/cubiertos-bambu.jpg" alt="Set de Cubiertos en Bambú">
-        </div>
-        <div class="card-body">
-            <span class="product-category">ALIMENTOS</span>
-            <h3 class="product-title">Set de Cubiertos en Bambú</h3>
-            <p class="product-price">$35.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+        <!-- Contenedor Principal: Filtros + Buscador + Grid -->
+        <div class="catalog-layout">
+            
+            <!-- Barra lateral de Filtros (Sticky) -->
+            <aside class="filters-sidebar">
+                <div class="filter-group">
+                    <h3>FILTROS</h3>
+                </div>
 
-    <!-- Producto 5 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/jabon-artesanal.jpg" alt="Jabón Natural de Avena">
-        </div>
-        <div class="card-body">
-            <span class="product-category">CUIDADO PERSONAL</span>
-            <h3 class="product-title">Jabón Natural de Avena</h3>
-            <p class="product-price">$22.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                <div class="filter-group">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><label><input type="checkbox" checked> Todos</label></li>
+                        <li><label><input type="checkbox"> Estilo Casual</label></li>
+                        <li><label><input type="checkbox"> Estilo Deportivo</label></li>
+                        <li><label><input type="checkbox"> Estilo Urbano</label></li>
+                        <li><label><input type="checkbox"> Estilo Artístico</label></li>
+                    </ul>
+                </div>
 
-    <!-- Producto 6 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/velas-soja.jpg" alt="Vela Aromática de Soja">
-        </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR</span>
-            <h3 class="product-title">Vela Aromática de Soja</h3>
-            <p class="product-price">$54.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                <div class="filter-group">
+                    <h4>Disponibilidad</h4>
+                    <ul>
+                        <li><label><input type="checkbox" checked> En Stock</label></li>
+                        <li><label><input type="checkbox"> Agotado</label></li>
+                    </ul>
+                </div>
 
-    <!-- Producto 7 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/bolsa-algodon.jpg" alt="Red de Compras Reutilizable">
-        </div>
-        <div class="card-body">
-            <span class="product-category">MODA SOSTENIBLE</span>
-            <h3 class="product-title">Red de Compras Reutilizable</h3>
-            <p class="product-price">$28.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                <div class="filter-group">
+                    <h4>Rango de Precio</h4>
+                    <p class="price-range-label">$35.000 – $180.000 COP</p>
+                </div>
+            </aside>
 
-    <!-- Producto 8 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/cepillo-bambu.jpg" alt="Estropajo Vegetal Exfoliante">
-        </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR</span>
-            <h3 class="product-title">Estropajo Vegetal Exfoliante</h3>
-            <p class="product-price">$15.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+            <!-- Sección de Contenido -->
+            <section class="products-content">
+                
+                <!-- Buscador visual estilizado -->
+                <div class="visual-search-bar">
+                    <input type="text" placeholder="Buscar prendas sostenibles..." aria-label="Buscar">
+                    <button type="submit" aria-label="Buscar">
+                        <img src="../img/icons/search.svg" alt="Buscar" class="search-btn-icon">
+                    </button>
+                </div>
 
-    <!-- Producto 9 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/termo-inox.jpg" alt="Botella Térmica Compacta">
-        </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR & VIAJE</span>
-            <h3 class="product-title">Botella Térmica 500ml</h3>
-            <p class="product-price">$72.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                <!-- Grid de 20 Productos -->
+                <div class="catalog-grid">
 
-    <!-- Producto 10 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge agotado">Agotado</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/jabon-artesanal.jpg" alt="Shampoo Sólido Botánico">
-        </div>
-        <div class="card-body">
-            <span class="product-category">CUIDADO PERSONAL</span>
-            <h3 class="product-title">Shampoo Sólido Botánico</h3>
-            <p class="product-price">$32.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 1 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Camisa de Lino Casual">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO CASUAL</span>
+                            <h3 class="product-title">Camisa de Lino Algodón</h3>
+                            <p class="product-price">$85.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 11 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/bolsa-algodon.jpg" alt="Camiseta de Cáñamo Orgánico">
-        </div>
-        <div class="card-body">
-            <span class="product-category">MODA SOSTENIBLE</span>
-            <h3 class="product-title">Camiseta de Cáñamo Orgánico</h3>
-            <p class="product-price">$110.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 2 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Top Deportivo de Cáñamo">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO DEPORTIVO</span>
+                            <h3 class="product-title">Top Deportivo Reciclado</h3>
+                            <p class="product-price">$65.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 12 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/cubiertos-bambu.jpg" alt="Pitillos de Acero + Cepillo">
-        </div>
-        <div class="card-body">
-            <span class="product-category">ALIMENTOS</span>
-            <h3 class="product-title">Set Pitillos Inoxidables (x4)</h3>
-            <p class="product-price">$24.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 3 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Chaqueta Urbana de Lino">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO URBANO</span>
+                            <h3 class="product-title">Chaqueta Oversize Lino</h3>
+                            <p class="product-price">$140.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 13 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/velas-soja.jpg" alt="Incienso Natural Artesanal">
-        </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR</span>
-            <h3 class="product-title">Pack Incienso Botánico</h3>
-            <p class="product-price">$19.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 4 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge agotado">Agotado</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Vestido Bordado Botánico">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO ARTÍSTICO</span>
+                            <h3 class="product-title">Vestido Bordado Botánico</h3>
+                            <p class="product-price">$165.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 14 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/jabon-artesanal.jpg" alt="Acondicionador Sólido">
-        </div>
-        <div class="card-body">
-            <span class="product-category">CUIDADO PERSONAL</span>
-            <h3 class="product-title">Acondicionador de Coco</h3>
-            <p class="product-price">$34.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 5 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Pantalón Casual de Cáñamo">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO CASUAL</span>
+                            <h3 class="product-title">Pantalón Talle Alto Cáñamo</h3>
+                            <p class="product-price">$110.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 15 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge agotado">Agotado</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/bolsa-algodon.jpg" alt="Mochila de Lino Reciclado">
-        </div>
-        <div class="card-body">
-            <span class="product-category">MODA SOSTENIBLE</span>
-            <h3 class="product-title">Mochila de Lino Reciclado</h3>
-            <p class="product-price">$145.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 6 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Short Deportivo Sostenible">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO DEPORTIVO</span>
+                            <h3 class="product-title">Short de Entrenamiento Orgánico</h3>
+                            <p class="product-price">$55.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 16 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/cubiertos-bambu.jpg" alt="Portaviandas de Acero Inoxidable">
-        </div>
-        <div class="card-body">
-            <span class="product-category">ALIMENTOS</span>
-            <h3 class="product-title">Contenedor de Acero Hermético</h3>
-            <p class="product-price">$65.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 7 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Camiseta Graphic Art">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO ARTÍSTICO</span>
+                            <h3 class="product-title">Camiseta Ilustrada a Mano</h3>
+                            <p class="product-price">$78.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 17 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/cepillo-bambu.jpg" alt="Peine de Madera de Nim">
-        </div>
-        <div class="card-body">
-            <span class="product-category">CUIDADO PERSONAL</span>
-            <h3 class="product-title">Peine Antiestático de Nim</h3>
-            <p class="product-price">$26.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 8 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Hoodie Urbano Reciclado">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO URBANO</span>
+                            <h3 class="product-title">Hoodie Minimalista Algodón</h3>
+                            <p class="product-price">$125.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 18 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/velas-soja.jpg" alt="Difusor de Aceites Esenciales">
-        </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR</span>
-            <h3 class="product-title">Difusor de Vidrio & Madera</h3>
-            <p class="product-price">$98.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 9 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Kimono Artesanal">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO ARTÍSTICO</span>
+                            <h3 class="product-title">Kimono Textil Artesanal</h3>
+                            <p class="product-price">$150.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 19 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/bolsa-algodon.jpg" alt="Envoltorios de Cera de Abeja">
-        </div>
-        <div class="card-body">
-            <span class="product-category">HOGAR</span>
-            <h3 class="product-title">Envoltorios Ecológicos (Pack x3)</h3>
-            <p class="product-price">$42.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 10 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge agotado">Agotado</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Leggings Biodegradables">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO DEPORTIVO</span>
+                            <h3 class="product-title">Leggings Flex Orgánicos</h3>
+                            <p class="product-price">$88.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-    <!-- Producto 20 -->
-    <article class="product-card">
-        <div class="card-image-wrapper">
-            <span class="stock-badge">En Stock</span>
-            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
-            <img src="../img/products/jabon-artesanal.jpg" alt="Bótox Capilar Vegano">
-        </div>
-        <div class="card-body">
-            <span class="product-category">CUIDADO PERSONAL</span>
-            <h3 class="product-title">Mascarilla Capilar Orgánica</h3>
-            <p class="product-price">$48.000 COP</p>
-            <a href="#" class="card-button">Ver más &rarr;</a>
-        </div>
-    </article>
+                    <!-- Producto 11 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Vestido Casual Fresco">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO CASUAL</span>
+                            <h3 class="product-title">Vestido Midi de Lino</h3>
+                            <p class="product-price">$130.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
 
-</div>
+                    <!-- Producto 12 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Jogger Urbano">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO URBANO</span>
+                            <h3 class="product-title">Jogger Eco Fleece</h3>
+                            <p class="product-price">$95.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 13 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Chaleco Bordado Artístico">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO ARTÍSTICO</span>
+                            <h3 class="product-title">Chaleco Etnico de Lino</h3>
+                            <p class="product-price">$115.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 14 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Camiseta Básica Casual">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO CASUAL</span>
+                            <h3 class="product-title">Camiseta Básica de Algodón</h3>
+                            <p class="product-price">$48.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 15 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge agotado">Agotado</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Chaqueta Deportiva">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO DEPORTIVO</span>
+                            <h3 class="product-title">Cortavientos Reciclado</h3>
+                            <p class="product-price">$135.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 16 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Bermuda Urbana">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO URBANO</span>
+                            <h3 class="product-title">Bermuda de Cáñamo</h3>
+                            <p class="product-price">$72.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 17 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Poncho Artístico">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO ARTÍSTICO</span>
+                            <h3 class="product-title">Poncho Tejido Sostenible</h3>
+                            <p class="product-price">$120.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 18 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Musculosa Deportiva">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO DEPORTIVO</span>
+                            <h3 class="product-title">Musculosa Eco Active</h3>
+                            <p class="product-price">$42.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 19 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Top Urbano">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO URBANO</span>
+                            <h3 class="product-title">Crop Top Lino Natural</h3>
+                            <p class="product-price">$58.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 20 -->
+                    <article class="product-card">
+                        <div class="card-image-wrapper">
+                            <span class="stock-badge">En Stock</span>
+                            <button class="favorite-btn" aria-label="Añadir a favoritos">&#9825;</button>
+                            <img src="../img/products/bolsa-algodon.jpg" alt="Enterizo Casual">
+                        </div>
+                        <div class="card-body">
+                            <span class="product-category">ESTILO CASUAL</span>
+                            <h3 class="product-title">Enterizo de Lino Orgánico</h3>
+                            <p class="product-price">$155.000 COP</p>
+                            <a href="#" class="card-button">Ver más &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Paginación Visual -->
+                <div class="pagination">
+                    <a href="#" class="page-link disabled">&laquo; Anterior</a>
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">Siguiente &raquo;</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">EcoMarket</h3>
+                <p class="footer-subtext">Tienda Ecológica • Bucaramanga, Colombia</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>NAVEGACIÓN</h4>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>CONTACTO</h4>
+                <ul>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://whatsapp.com" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><a href="mailto:hola@ecomarket.co">hola@ecomarket.co</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>HORARIOS</h4>
+                <p>Lun–Sáb • 10:00 AM – 8:00 PM</p>
+                <p>Envíos sostenibles • 24 h</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 EcoMarket. Todos los derechos reservados.</p>
+                <p>Bucaramanga, Santander</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
