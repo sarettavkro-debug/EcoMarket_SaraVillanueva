@@ -1,4 +1,6 @@
-
+/* ==========================================
+   1. ENCABEZADO (HEADER) - MOBILE FIRST
+   ========================================== */
 .main-header {
     position: sticky;
     top: 0;
@@ -25,6 +27,7 @@
     color: var(--text-light);
 }
 
+/* 📱 Móvil por defecto: Ocultar enlaces de texto para dejar vista limpia */
 .nav-menu {
     display: none;
 }
@@ -42,11 +45,12 @@
     display: block;
 }
 
+/* El botón hamburguesa se muestra únicamente en móvil */
 .menu-toggle {
     display: block;
 }
 
-
+/* 💻 Escritorio (Desde 768px): Mostrar menú horizontal completo */
 @media (min-width: 768px) {
     .header-container {
         padding: 20px;
@@ -55,7 +59,6 @@
     .logo {
         font-size: 1.8rem;
     }
-
 
     .nav-menu {
         display: block;
@@ -87,17 +90,21 @@
         height: 22px;
     }
 
-    /* Ocultar el botón hamburguesa en PC */
     .menu-toggle {
         display: none;
     }
 }
 
 
+/* ==========================================
+2. HERO SECTION (INICIO) - MOBILE FIRST
+   ========================================== */
 .hero-section {
     position: relative;
     min-height: 80vh;
-    background-image: url('../img/hero/fondojiji.jpg'); 
+    
+
+    background-image: url("../img/hero/fondojiji.jpg"); 
     
     background-size: cover;
     background-position: center;
@@ -183,6 +190,9 @@
 }
 
 
+/* ==========================================
+   3. SECCIÓN DESTACADOS (INICIO)
+   ========================================== */
 .featured-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -202,14 +212,12 @@
     margin-bottom: 30px;
 }
 
-/* Base móvil: 1 columna de tarjetas */
 .products-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* Tabletas (desde 600px): 2 columnas */
 @media (min-width: 600px) {
     .featured-section {
         margin: 80px auto;
@@ -226,7 +234,6 @@
     }
 }
 
-/* Escritorio (desde 992px): 3 columnas */
 @media (min-width: 992px) {
     .section-header h2 {
         font-size: 2.5rem;
@@ -238,13 +245,180 @@
     }
 }
 
+
+/* ==========================================
+   4. CATÁLOGO Y FILTROS (PRODUCTOS)
+   ========================================== */
+.catalog-main {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.catalog-header-container {
+    margin-bottom: 30px;
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.breadcrumbs a {
+    color: var(--text-muted);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-green);
+}
+
+.catalog-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+/* Layout vertical por defecto en móvil */
+.catalog-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Sidebar de Filtros estilizada */
+.filters-sidebar {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.filter-group {
+    margin-bottom: 24px;
+}
+
+.filter-group h3, 
+.filter-group h4 {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: var(--accent-green);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.filter-group ul {
+    list-style: none;
+}
+
+.filter-group li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.price-range-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Buscador visual estilizado */
+.visual-search-bar {
+    display: flex;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 4px 8px;
+    margin-bottom: 30px;
+}
+
+.visual-search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.visual-search-bar button {
+    background: var(--accent-green);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: var(--bg-dark);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Matriz de productos */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Adaptabilidad a Tablet y Desktop */
+@media (min-width: 768px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .catalog-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .filters-sidebar {
+        width: 260px;
+        position: sticky;
+        top: 100px;
+        flex-shrink: 0;
+    }
+
+    .products-content {
+        flex: 1;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .catalog-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalog-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* ==========================================
+   5. PIE DE PÁGINA (FOOTER) - MOBILE FIRST
+   ========================================== */
 .main-footer {
     background-color: #121a14;
     border-top: 1px solid var(--border-color);
     padding-top: 40px;
 }
 
-/* Base móvil: 1 sola columna verticada */
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -307,227 +481,36 @@
     color: var(--text-muted);
 }
 
-/* ==========================================
-1. ENCABEZADO (HEADER) - MOBILE FIRST
-   ========================================== */
-.main-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(27, 38, 30, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 12px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-light);
-}
-
-/* Móvil: Ocultar menú de enlaces horizontal */
-.nav-menu {
-    display: none;
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.header-icon {
-    width: 20px;
-    height: 20px;
-    filter: invert(0.9);
-    display: block;
-}
-
-.menu-toggle {
-    display: block;
-}
-
-/* Pantallas grandes (Desktop) */
-@media (min-width: 768px) {
-    .header-container {
-        padding: 20px;
+@media (min-width: 992px) {
+    .main-footer {
+        padding-top: 60px;
     }
 
-    .logo {
+    .footer-container {
+        padding-bottom: 40px;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+    }
+
+    .footer-logo {
         font-size: 1.8rem;
     }
 
-    .nav-menu {
-        display: block;
+    .footer-subtext,
+    .footer-col a, 
+    .footer-col p {
+        font-size: 0.9rem;
     }
 
-    .nav-menu ul {
-        display: flex;
-        list-style: none;
-        gap: 30px;
+    .footer-col h4 {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
     }
 
-    .nav-menu a {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        transition: color 0.3s ease;
-    }
-
-    .nav-menu a.active, 
-    .nav-menu a:hover {
-        color: var(--accent-green);
-    }
-
-    .header-actions {
-        gap: 20px;
-    }
-
-    .header-icon {
-        width: 22px;
-        height: 22px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-}
-
-
-/* ==========================================
-   2. HERO SECTION (INICIO) - MOBILE FIRST
-   ========================================== */
-.hero-section {
-    position: relative;
-    min-height: 80vh;
-    background-image: url('../img/hero/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-.hero-backdrop {
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background: linear-gradient(180deg, rgba(27, 38, 30, 0.85) 0%, rgba(27, 38, 30, 0.5) 100%);
-}
-
-.hero-card {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 550px;
-    background: rgba(27, 38, 30, 0.55);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border-color);
-    padding: 30px 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.hero-tagline {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--accent-green);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.hero-title {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    color: var(--accent-green);
-    margin: 10px 0;
-}
-
-.hero-subtitle {
-    font-size: 1rem;
-    color: var(--text-light);
-    margin-bottom: 25px;
-}
-
-@media (min-width: 768px) {
-    .hero-section {
-        height: 85vh;
-        justify-content: flex-start;
-        padding: 0 8%;
-    }
-
-    .hero-backdrop {
-        background: linear-gradient(90deg, rgba(27, 38, 30, 0.85) 0%, rgba(27, 38, 30, 0.4) 100%);
-    }
-
-    .hero-card {
-        padding: 40px;
+    .footer-bottom-container {
+        flex-direction: row;
+        justify-content: space-between;
         text-align: left;
-    }
-
-    .hero-tagline {
-        font-size: 0.85rem;
-    }
-
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 }
-
-
-/* ==========================================
-   3. SECCIÓN DE INICIO / DESTACADOS
-   ========================================== */
-.featured-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.section-tag {
-    font-size: 0.75rem;
-    color: var(--accent-green);
-    letter-spacing: 2px;
-}
-
-.section-header h2 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin-top: 5px;
-    margin-bottom: 30px;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-@media (min-width: 600px) {
-    .featured-section {
-        margin: 80px auto;
-    }
-
-    .section-header h2 {
-        font-size: 2.2rem;
-        margin-bottom: 40
